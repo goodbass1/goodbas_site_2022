@@ -1,0 +1,19 @@
+[main]
+
+title_rule = {page.name} - Хорошие Бассейны под ключ
+description_rule = {page.name}, сайт {site.domain}. Мы строим Хорошие Бассейны. Наш телефон: {site.phone}, адрес: {site.address}.
+keywords_rule= {page.name}, Бассейн, Ростов, Краснодар, Ростов-на-Дону, Сочи, Хорошие, Бассейны
+
+author= Algorithm Computers
+name = Хорошие Бассейны
+phone = 8 (863) 270-58-70
+tel = +78632705870
+email = info@хорошиебассейны.рф
+address = г. Батайск, ул. Грузинская, 272 Д
+company = Хорошие Бассейны
+domain = test22.goodbas.ru
+
+
+[thumbnails]
+portfolio = 800,0
+team = 300,300

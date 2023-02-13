@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+<head>
+  {% block head %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+  <link rel="stylesheet" href={{ url_for('static', filename="css/bootstrap-reboot.min.css") }}>
+  <link rel="stylesheet" href={{ url_for('static', filename="css/fontello.css") }}>
+  <link rel="stylesheet" href={{ url_for('static', filename="css/bootstrap.min.css") }}>
+  <link rel="stylesheet" href={{ url_for('static', filename="css/font.css") }}>
+  <link rel="stylesheet" href={{ url_for('static', filename="css/style_v.1.0.10.css") }}>
+  <link rel="stylesheet" href={{ url_for('static', filename="css/media_v.1.0.10.css") }}>
+  <meta name="description" content="{{ page.description }}">
+  <meta name="keywords" content="{{ page.keywords }}">
+  {% endblock %}
+
+  {% block title %} 
+  <title>{{ page.title }}</title>
+  {% endblock %}
+</head>
+
+<body>
+  <style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;width: 100vw;background: rgba(233, 232, 231, 0.97) url('/static/image/loading.gif') center center no-repeat;background-size:41px;}</style>
+  <div id="hellopreloader" style="text-align: center;"><div id="hellopreloader_preload"  ><img style="margin-top: 20px; width: 260px;" src="/static/image/hb_logo.svg"></div></div>
+  
+  <script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1000);};</script>
+  <!-- HelloPreload http://hello-site.ru/preloader/ -->
+  
+
+
+  {% block header %}
+ <!-- header -->
+ <div class="header">
+  <div class="row align-items-center">
+    <div class="col-5 col-md-2 col-lg-2 col-xl-2 col-xxl-3 logo">
+      <a class="link-logo" href="/">
+        <img class="header-logo" src="/static/image/hb_logo.svg" alt="logo">
+      </a>
+    </div>
+    <div class="col-12 col-md-7 col-lg-7 col-xl-8 col-xxl-6 header-text">
+      СТРОИТЕЛЬСТВО БАССЕЙНОВ ПОД КЛЮЧ В ЮЖНОМ ФЕДЕРАЛЬНОМ ОКРУГЕ И РЕСПУБЛИКЕ КРЫМ
+      {% if page.id != 0: %}
+        {% block breadcrumbs %}
+          {% include 'breadcrumbs.html' %}
+        {% endblock %}
+      {% endif %}
+    </div>
+
+
+    <div class="col-7 col-md-3 col-lg-3 col-xl-2 col-xxl-3 justify-content-end">
+
+      <div class="header-btngroup">
+        {% block button_portfolio %}
+        <a href="/portfolio" class="portfolio"><button type="button" class="btn btn-portfolio">портфолио</button>
+        </a>
+        {% endblock %}
+
+        <div>
+          <a href="tel:{{ site.tel }}" class="link-phone link-phone-header ">
+            <button class="phone">
+              <i class="icons"></i>
+            </button>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+    
+  </div>
+  <!-- end header  -->
+  {% endblock %}
+
+  {% block content %}
+  {% endblock %}
+
+  {% block footer %}
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-btn">
+        <div class="box">
+          <a href="/address" class="footer-link link-phone">
+            <button class="footer-button phone">
+              <i class="icon-location  footer-icon"></i>
+            </button>
+
+          </a>
+          <span class="icon-text">Офис компании</span>
+        </div>
+
+
+        <div class="box">
+          <a href="tel:{{ site.tel }}" class="footer-link link-phone">
+            <button class="footer-button phone">
+              <i class="icon-phone  footer-icon"></i>
+            </button>
+          </a>
+          <span class="icon-text">Телефон</span>
+        </div>
+
+        <div class="box">
+          <a href="#" class="footer-link link-phone">
+            <button class="footer-button phone">
+              <i class="icon-instagram  footer-icon"></i>
+            </button>
+          </a>
+          <span class="icon-text">Социальные сети</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  {% endblock %}
+
+
+
+  <!-- end geography -->
+  {% block scripts %}
+  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  {% endblock %}
+  
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<section class="adress">
+  <div class="container">
+    <div class="adress-title">Офис компании</div>
+    <div class="adress-text">Мы находимся по адресу:<span> Ростовская область, г. Батайск, ул.
+      Грузинская 272 Д.</span><br> На территории компании имеются готовые выставочные решения по типу и обустройству бассейнов.<br>
+      Чтобы увидеть уже готовые объекты: нажмите на кнопку <span >"ПОРТФОЛИО"</span>
+     </div>
+      
+
+      <div id="carouselExampleControls" class="carousel slide carousel-adress" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item ">
+            <img src="/static/image/bas.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item active">
+            <img src="/static/image/2.jpg" class="d-block w-100" alt="...">
+          </div>
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <!-- <span class="visually-hidden">Previous</span> -->
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <!-- <span class="visually-hidden">Next</span> -->
+        </button>
+      </div>
+      
+      
+</section>
+  <div class="map">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aebf590729ac2f53f1ef7d4f3624ff4d9455c3aac048afb8d94d473e02a755950&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false"></script>
+  </div>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+
+
+<!-- вставка ссылки хлебные крошки -->
+
+<div class="row">
+  <div class="col-12">
+    <nav aria-label="breadcrumb ">
+      <ol class="breadcrumb mb-0">
+        
+        {% for parent in page.breadcrumbs %}
+              <li class="breadcrumb-item"><a class="breadcrumb-link" href="{{ parent.path }}">{{ parent.name }}</a></li>
+        {% endfor %}
+
+        <li class="breadcrumb-item active breadcrumb-text" aria-current="page">{{ page.name }}</li>
+
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- конец  -->

@@ -1,0 +1,144 @@
+{% extends 'configurator.html' %}
+
+{% block content %}
+<section class="counter">
+  <div class="container">
+    <div class="counter-inner">
+    <div class="counter-title">Конфигуратор Бассейна</div>
+    <div class="counter-text">На примере бассейна, размером 5М*2,5М, глубиной 1,5М, можете ознакомиться со всеми доступными опциями бассейнов категории<span>Премиум:</span>
+    </div>
+    <div class="counter-optoins">
+      <ul class="counter-link">
+        <li class="counter-item">Автаматическое внесение химии<input value=30 type="checkbox" id="auto-chemistry" class="counter-check"><label class="counter-input" for="auto-chemistry"></label></li>
+        <!-- <li class="counter-item">Бортовой камень керамогранит<input value=30 type="checkbox" class="counter-check" id="rock"><label class="counter-input" for="rock"></label></li> -->
+        <li class="counter-item">Гарантия 3 года<input value=30 type="checkbox" class="counter-check" id="warranty"><label class="counter-input" for="warranty"></label></li>
+        <li class="counter-item">Закладные элементы нержавеющая сталь<input value=30 type="checkbox" class="counter-check" id="abc"><label class="counter-input" for="abc"></label></li>
+        <li class="counter-item">Изготовление чаши бассейна<input value=30 type="checkbox" class="counter-check" id="make-cap"><label class="counter-input" for="make-cap"></label></li>
+        <li class="counter-item">Контроль уровня воды<input value=30 type="checkbox" class="counter-check" id="water-control"><label class="counter-input" for="water-control"></label></li>
+        <li class="counter-item">Монтажные работы<input value=30 type="checkbox" class="counter-check" id="work"><label class="counter-input" for="work"></label></li>
+        <li class="counter-item">Облицовка широкоформатным керамогранитом<input value=30 type="checkbox" class="counter-check" id="pvh"><label class="counter-input" for="pvh"></label></li>
+        <li class="counter-item">Освещение RGB<input value=30 type="checkbox" class="counter-check" id="light"><label class="counter-input" for="light"></label></li>
+        <li class="counter-item">Подводный пылесос<input value=30 type="checkbox" class="counter-check" id="underwater-cleaner"><label class="counter-input" for="underwater-cleaner"></label></li>
+        <li class="counter-item">Подогрев от газового котла<input value=30 type="checkbox" class="counter-check" id="heating"><label class="counter-input" for="heating"></label></li>
+        <li class="counter-item">Стационарная лестница<input value=30 type="checkbox" class="counter-check" id="ladder"><label class="counter-input" for="ladder"></label></li>
+        <li class="counter-item">Техническая поддержка<input value=30 type="checkbox" class="counter-check" id="support"><label class="counter-input" for="support"></label></li>
+        <li class="counter-item">Фильтрационное оборудование согласно требований ГОСТ<input value=30 type="checkbox" class="counter-check" id="filter"><label class="counter-input" for="filter"></label></li>
+        <li class="counter-item">Химия для запуска и эксплуатации<input value=30 type="checkbox" class="counter-check" id="start-chemistry"><label class="counter-input" for="start-chemistry"></label></li>
+      </ul>
+      <!-- дополнение -->
+      <div class="counter-pic counter-pic_background-infinity" id="counter-pic"></div>
+        <div class="counter-btn">
+
+          <div>
+            <div class="radio-text">Инфинити</div>
+              <input value=30 type="radio" id="auto-picture-infinity" class="counter-radio" name="type"><label class="input-picture" for="auto-picture-infinity"></label>
+          </div>
+
+          <div>
+            <div class="radio-text">Решетка</div>
+            <input value=30 type="radio" id="auto-picture-lattice" class="counter-radio" name="type"><label class="input-picture" for="auto-picture-lattice"></label>
+          </div>
+
+            <div>
+              <div class="radio-text">Щелевой</div>
+              <input value=30 type="radio" id="auto-picture-overflow" class="counter-radio" name="type"><label class="input-picture" for="auto-picture-overflow"></label>
+            </div>
+
+        </div>
+      <!-- конец -->
+    </div>
+    
+    <div class="configurator-result">
+      <div class="configurator-title">Итого бассейн в комплектации Премиум:</div>
+      <div class="summ" style="font-size: 28px;">0</div>
+    </div>
+    <div class="choice-text">Заказать рассчет в другом размере,выберите длину в м:</div>
+
+    <div class="container">
+      <div class="choice-btn">
+        <div class="box">
+          <a href="#" class="choice-link link-phone">
+            <button id="6m" class="choice-button phone" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <span class="choice-icon">6</span>
+            </button>
+
+          </a>
+        </div>
+        <div class="box">
+          <a href="#" class="choice-link link-phone">
+            <button id="7m" class="choice-button phone" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <span class="choice-icon">7</span>
+            </button>
+          </a>
+        </div>
+        <div class="box">
+          <a href="#" class="choice-link link-phone">
+            <button id="8m" class="choice-button phone" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <span class="choice-icon">8</span>
+            </button>
+          </a>
+        </div>
+        <div class="box">
+          <a href="#" class="choice-link link-phone">
+            <button id="9m" class="choice-button phone" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <span class="choice-icon">9</span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  </div>
+</section>
+
+<!-- modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="height: 100%;">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Рассчет в другом размере</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-label">Мы рассчитаем бассейн исходя из выбранной длины. Оставьте свои контакты, мы перезвоним вам в ближайшее рабочее время.</div>
+      <div class="modal-body">
+        <form method="POST">
+          <div class="row mb-3">
+            <label class="col-md-3 col-form-label">Ваше имя *</label>
+            <div class="col-md-6">
+              {{ forms['feedback'].name(class_='form-control') }}
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label for="inputpPhone" class="col-md-3 col-form-label">Телефон *</label>
+            <div class="col-md-6">
+              {{ forms['feedback'].phone(class_='form-control') }}
+            </div>
+          </div>
+
+          <!-- <div class="row mb-6 ">
+            <label for="message-text" class="col-form-label mt-3">Оставьте ваш вопрос:</label>
+            <div class="col-md-9">
+              {{ forms['feedback'].message(class_='form-control') }}
+            </div>
+          </div> -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            {{ forms['feedback'].submit(class_='btn btn-primary') }}
+          </div>
+          {{ forms['feedback'].page_url() }}
+          {{ forms['feedback'].page_name() }}
+          {{ forms['feedback'].choice() }}
+         </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<script src="{{ url_for('static', filename='js/configurator_premium.js') }}"></script>
+{% endblock %}

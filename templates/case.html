@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+  <div class="case-slides">
+    <h1 class="price-title">Кейс {{ page.h1 }} и отзывы</h1>
+
+    {% for slide in site.albums[page.info.album].slides %}
+    <div class="">
+        <a href="{{ slide.src }}"><img src="{{ slide.src }}" class="d-block w-100" alt="..."></a>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="review-inner">
+    <h2 class="review-title">Отзывы: {{ page.h1 }}</h2>
+    <p class="review-text">{{ page.info.review | safe }}</p>
+  </div>
+</div>
+
+{% endblock %}

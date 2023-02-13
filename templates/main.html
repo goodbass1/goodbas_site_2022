@@ -1,0 +1,303 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+  
+  <!-- section -->
+  <section class="banner">
+    <div class="bg">
+      <div class="form">
+        <div class="form-icon"></div>
+        <span class="">Добрый день.</span>
+        <p class="text">Оставьте заявку для выезда профессионала на Ваш участок. Услуга бесплатная.</p>
+        <p class="text feedback_text">Офис: г. Батайск, ул. Донецкая 18 (пересечение с ул. Грузинской)</p>
+        <!-- <button type="button" class=" btn request mybtn">Оставить заявку</button> -->
+        <button type="button" class=" btn person mybtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Оставить
+          заявку</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="height: 100%;">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Заполните форму</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <form method="POST">
+            <div class="row mb-3">
+              <label class="col-md-3 col-form-label">Ваше имя *</label>
+              <div class="col-md-6">
+                {{ forms['feedback'].name(class_='form-control') }}
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label for="inputpPhone" class="col-md-3 col-form-label">Телефон *</label>
+              <div class="col-md-6">
+                {{ forms['feedback'].phone(class_='form-control') }}
+              </div>
+            </div>
+
+            <div class="row mb-6 ">
+              <label for="message-text" class="col-form-label mt-3">Оставьте ваш вопрос:</label>
+              <div class="col-md-9">
+                {{ forms['feedback'].message(class_='form-control') }}
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+              {{ forms['feedback'].submit(class_='btn btn-primary') }}
+            </div>
+            {{ forms['feedback'].page_url() }}
+            {{ forms['feedback'].page_name() }}
+           </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- start price -->
+  <section class="price">
+    <div class="container">
+      <div class="price-inner">
+        <h2 class="price-title  ">хороший бассейн - в каждый дом.</h2>
+        <p class="price-text ">Регулярный опыт подготовки расчетов и коммерческих
+          предложений позволил выделить три основные комплектации хороших бассейнов:</p>
+        <div class="price-btn">
+          <a class="price-btn-link" href="/configurator-standard"><button type="button"
+            class=" btn btn-standard text-uppercase price-button">стандарт</button></a>
+          <a class="price-btn-link" href="/configurator-prestige""><button type="button"
+              class=" btn btn-prestige text-uppercase price-button">престиж</button></a>
+          <a class="price-btn-link" href="/configurator-premium"><button type="button"
+              class=" btn btn-primium text-uppercase price-button">премиум</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end price -->
+
+  <!-- start product -->
+  <section class="product">
+    <div class="container">
+      <div class="product-inner">
+        <div class="product-desc">
+          <div class="product-title">бассейн стандарт</div>
+          <div class="product-text">Линейка изделий &nbspпо наиболее доступным ценам.
+            Гарантия 1 год.</div>
+        </div>
+        <div class="product-btn">
+          <span>Нажмите, чтобы узнать стоимость</span>
+          <div class="product-button">
+            <a href="/configurator-standard" class="link-product-button">
+
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+  <!-- end product -->
+
+
+  <!-- start product2 -->
+  <section class="product">
+    <div class="container">
+      <div class="product-inner-2"">
+        <div class="product-desc">
+          <div class="product-title">бассейн престиж</div>
+          <div class="product-text">Линейка изделий с расширенным набором опций.
+            Гарантия 2 года.</div>
+        </div>
+        <div class="product-btn">
+          <span>Нажмите, чтобы узнать стоимость</span>
+          <div class="product-button">
+            <a href="/configurator-prestige" class="link-product-button">
+
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+  <!-- end product2 -->
+
+
+  <!-- start product3 -->
+  <section class="product">
+    <div class="container">
+      <div class="product-inner-3">
+        <div class="product-desc">
+          <div class="product-title">бассейн премиум</div>
+          <div class="product-text">Линейка изделий высочайшего качества.
+            Гарантия 3 года.</div>
+        </div>
+        <div class="product-btn">
+          <span>Нажмите, чтобы узнать стоимость</span>
+          <div class="product-button">
+            <a href="/configurator-premium" class="link-product-button">
+
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+  <!-- end product3 -->
+
+  <!-- our team -->
+
+  <section class="our-team">
+    <div class="container">
+
+      <div class="team-inner">
+        <div class="team-title">наша команда.</div>
+        <div class="team-text">Основной состав.</div>
+        
+        <div class="wrapper-size person-one">
+          <div class="team-person ">
+            <img class="img-foto" src="{{ site.albums['Команда'].get_slide('Сергей.jpg').thumbnails['team'].src }}" alt="Рожко Сергей" srcset="">
+          </div>
+          <div class="team-name">Рожко Сергей</div>
+          <div class="team-desc">Подготовит расчет стоимости, ответит за качество бассейна.</div>
+        </div>
+
+        <div class="wrapper-size person-two">
+          <div class="team-person ">
+              <img class="img-foto" src="{{ site.albums['Команда'].get_slide('Никита.jpg').thumbnails['team'].src }}" alt="Рожко Никита" srcset="">
+          </div>
+          <div class="team-name">Рожко Никита</div>
+          <div class="team-desc">Визуализирует бассейн и территорию вокруг, ответит за качество бассейна.</div>
+        </div>
+
+        <div class="wrapper-size person-three">
+          <div class="team-person ">
+            <img class="img-foto" src="{{ site.albums['Команда'].get_slide('Андрей.jpg').thumbnails['team'].src }}" alt="Акишин Андрей" srcset="">
+          </div>
+          <div class="team-name">Акишин Андрей</div>
+          <div class="team-desc">Организует работы по облицовке бассейна и сборке оборудования.</div>
+        </div>
+
+        <div class="wrapper-size person-four">
+          <div class="team-person ">
+              <img class="img-foto" src="{{ site.albums['Команда'].get_slide('Полина.jpg').thumbnails['team'].src }}" alt="Акишина Полина" srcset="">
+          </div>
+          <div class="team-name">Акишина Полина</div>
+          <div class="team-desc">Обеспечит поставку всех элементов бассейна.</div>
+        </div> 
+
+        <div class="wrapper-size person-three">
+          <div class="team-person ">
+              <img class="img-foto" src="{{ site.albums['Команда'].get_slide('Иван.jpg').thumbnails['team'].src }}" alt="Жулинский Иван" srcset="">
+          </div>
+          <div class="team-name">Жулинский Иван</div>
+          <div class="team-desc">Выполнит комплекс работ по сборке оборудования.</div>
+        </div>
+        
+        <div class="wrapper-size person-four">
+          <div class="team-person ">
+              <img class="img-foto" src="{{ site.albums['Команда'].get_slide('Алексей.jpg').thumbnails['team'].src }}" alt="Лабинцев Алексей" srcset="">
+          </div>
+          <div class="team-name">Лабинцев Алексей</div>
+          <div class="team-desc">Проведет комплекс работ по техническому обслуживанию бассейна.</div>
+        </div>
+
+        <div class="wrapper-size person-three">
+          <div class="team-person ">
+              <img class="img-foto" src="{{ site.albums['Команда'].get_slide('Кирилл.jpg').thumbnails['team'].src }}" alt="Окинин Кирилл" srcset="">
+          </div>
+          <div class="team-name">Окинин Кирилл</div>
+          <div class="team-desc">Обслужит Ваш бассейн, проконсультирует по любым техническим вопросам.</div>
+        </div>
+
+        <div class="wrapper-size person-four">
+          <div class="team-person ">
+              <img class="img-foto" src="{{ site.albums['Команда'].get_slide('Вячеслав.jpg').thumbnails['team'].src }}" alt="Писанко Вячеслав" srcset="">
+          </div>
+          <div class="team-name">Писанко Вячеслав</div>
+          <div class="team-desc">Осуществит все электромонтажные работы, обеспечит безопасность эксплуатации.</div>
+        </div>
+
+        <div class="wrapper-size person-three">
+          <div class="team-person">
+              <img class="img-foto" src="{{ site.albums['Команда'].get_slide('Ольга.jpg').thumbnails['team'].src }}" alt="Писанко Ольга" srcset="">
+          </div>
+          <div class="team-name">Писанко Ольга</div>
+          <div class="team-desc">Закроет все финансовые вопросы по сопровождению сделки.</div>
+        </div>
+
+        <div class="wrapper-size person-four">
+          <div class="team-person ">
+              <img class="img-foto" src="{{ site.albums['Команда'].get_slide('Александр.jpg').thumbnails['team'].src }}" alt="Чупров Александр" srcset="">
+          </div>
+          <div class="team-name">Чупров Александр</div>
+          <div class="team-desc">Выполнит комплекс работ по сборке оборудования.</div>
+        </div>
+
+        <div class="wrapper-size person-three">
+          <div class="team-person ">
+              <img class="img-foto" src="{{ site.albums['Команда'].get_slide('Олег.jpg').thumbnails['team'].src }}" alt="Шаныгин Олег" srcset="">
+          </div>
+          <div class="team-name">Шаныгин Олег</div>
+          <div class="team-desc">Сопроводит строительство бассейна от нулевого цикла до запуска всех аггрегатов.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- end our team -->
+
+  <!-- reviews -->
+  <section class="reviews">
+    <div class="container">
+      <div class="inner-reviews">
+        <div class="reviews-title">отзывы клиентов</div>
+        <div class="reviews-text">Для соблюдения всех необходимых технологических процессов
+          при производстве работ на объектах, инженеры компании фиксируют данные
+          в журнале производства работ (ЖПР). В конце каждого ЖПР есть раздел с оценками от клиента.
+	  Ознакомиться с оценками клиентов можете в разделе <a href="/portfolio" class="reviews-title reviews-title_link">"ПОРТФОЛИО"</a>
+        </div>
+	<!--
+        <div class="reviews-portfolio">
+          <a href="/portfolio" class="portfolio portfolio-reviews "><button type="button"
+              class="btn btn-portfolio">портфолио</button>
+          </a>
+        </div>
+	-->
+      </div>
+    </div>
+  </section>
+
+  <!-- end -->
+  <!-- geography -->
+  <section class="geography">
+    <div class="container">
+      <h3 class="geography-title">География хороших бассейнов, города и населённые пункты:</h3>
+      <div class="geography-text">Ростов-на-Дону, Таганрог, Новочеркасск, Азов, Старочеркасск, Астрахань, Алта, Адлер,
+        Сочи, Пицунда, Аксай, Чалтырь, Ольгинка, Красная Поляна, Хоста, Гостагаевская, Крым, Покровское, Дарагановка,
+        Кружилинский, Заплавская,
+        Дядьковская, Майкоп, Ленинаван, Егорлык, Стефанидинодар, Рогожкино, Беловодье, Батайск, Овощной, Красный сад,
+        Донской, Красный Крым, Ейск, Пухляковский, Самбуров
+        Радионово-Несветайская, Волошино, Генеральское, Чертково, Павло-Очаковская коса, Апаринский, Вёшенская,
+        Кагальник, Золотой колос, Боцманово, Ольгинская, Галицино...
+
+      </div>
+  </section>
+
+
+{% endblock %}

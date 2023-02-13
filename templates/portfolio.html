@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+  <div class="portfolio-inner">
+    
+    {% for subpage in page.subpages %}
+    <a href="{{ subpage.path }}">
+      <div class="portfolio-item portfolio-item-link-main">
+        <figure class="portfolio_figure">
+          <img class="portfolio-img" src="{{ site.albums[subpage.info.album].slides[0].thumbnails['portfolio'].src }}" alt="">
+          
+        </figure>
+        <a href="{{ subpage.path }}" class="portfolio-item-link">{{ subpage.name }}</a>
+      </div>
+    </a>
+    {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}
